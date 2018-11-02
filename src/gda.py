@@ -87,3 +87,13 @@ class GDA(LinearModel):
         p_y1 = self.phi * np.exp(-0.5 * z1)
 
         return (p_y1 > p_y0).astype(int)
+
+
+if __name__ == "__main__":
+    main(train_path='../data/ds1_train.csv',
+         eval_path='../data/ds1_valid.csv',
+         pred_path='output/p01e_pred_1.txt')
+
+    main(train_path='../data/ds2_train.csv',
+         eval_path='../data/ds2_valid.csv',
+         pred_path='output/p01e_pred_2.txt')

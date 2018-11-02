@@ -61,3 +61,10 @@ class PoissonRegression(LinearModel):
             Floating-point prediction for each input, shape (m,).
         """
         return np.exp(x.dot(self.theta))
+
+
+if __name__ == "__main__":
+    main(lr=1e-7,
+        train_path='../data/ds4_train.csv',
+        eval_path='../data/ds4_valid.csv',
+        pred_path='output/p03d_pred.txt')
